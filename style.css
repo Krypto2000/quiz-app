@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body{
+    font-family: sans-serif;
+    background: linear-gradient(110deg,whitesmoke, pink);
+    height: 100vh;
+} */
+body {
+    background: black;
+    color: white; /* Text color */
+    font-family: "Annie Use Your Telescope";
+}
+#date-time {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    color: white;
+}
+
+header{
+    background: #de0606a4;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    padding: 0 20px; /* Added padding to create space for the button */
+}
+
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .dark-icon {
+        margin-top: 10px;
+    }
+}
+
+.questions{
+    width: 90vw;
+    background: #de0606a4;
+    border-radius: 2rem;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+#question{
+    margin-bottom: 1rem;
+    color: black;
+}
+.option{
+    color: black;
+    margin-bottom: 0.6rem;
+    border-radius: 1rem;
+    background-color: rgba(126, 126, 126, 0.644);
+    width: 15rem;
+}
+.option:hover{
+    color: #fff;
+}
+span{
+    display: block;
+    padding: 0.1rem 0.7rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+header img{
+    height: 2rem;
+    width: 2rem;
+    margin-right: 10px;
+}
+.dark-icon{
+    height: 2rem;
+    width: 2rem;
+    background: #de0606a4;
+    border-radius: 1rem;
+    color: #fff;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+}
+
+.next{
+    height: 3rem;
+    width: 5rem;
+    border-radius: 1rem;
+    background: #de0606a4;
+    border: none;
+    color: #fff;
+    margin-left: 10px;
+}
+#previous{
+    height: 3rem;
+    width: 7rem;
+    border-radius: 1rem;
+    background: #de0606a4;
+    border: none;
+    color: #fff;
+}
+.dark-mode{
+    background: linear-gradient(150deg,brown, #f1b40af1 );
+    color: #fff;
+    transition: 1s ease;
+}
+#score-board{
+    width: 21rem;
+    background: #fff;
+    padding: 2rem;
+    margin: auto;
+    border: 1px solid pink;
+    text-align: center;
+    display: none;
+    position: relative;
+    top: 7rem;
+    font-family: "Annie Use Your Telescope";
+
+}
+button{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background:#de0606a4; 
+    border-radius: 1.5rem;
+    color: #fff;
+    padding: 0.2rem 1.5rem;
+    margin: 0.3rem;
+    text-align: center;
+    justify-content: center;
+    font-family: "Annie Use Your Telescope";
+}
+
+#content{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background:#de0606a4; 
+    border-radius: 1.5rem;
+    color: #fff;
+   height: 50vh;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+}
+#date-time, h1{
+    font-size: 30px;
+}
+.hide-div{
+    opacity: 0;
+}
+
+.show-div{
+    transition: 1s ease;
+}
+.correct {
+    background-color: green;
+    color: white;
+}
+
+.wrong {
+    background-color: red;
+    color: white;
+}
+/* Animation for option hover */
+.option {
+    transition: background-color 0.3s ease;
+}
+
+.option:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Animation for next and previous buttons */
+.next,
+#previous {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.next:hover,
+#previous:hover {
+    background-color: #ff5733; /* Change to your desired hover color */
+    color: white;
+}
+
+/* Fade-in animation for quiz container */
+#quiz-container {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scale-in animation for score board */
+#score-board {
+    animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+button:hover {
+    background-color: #ff5733; /* Change to your desired hover color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+    animation: glow 1.5s ease infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #ff5733; /* Change to your desired glow color */
+    }
+    to {
+        text-shadow: 0 0 10px #ff5733; /* Change to your desired glow color */
+    }
+}
+
+#score-board {
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+.correct, .wrong {
+    animation: pulsate 1s infinite alternate;
+}
+
+@keyframes pulsate {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+.questions {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
+    header {
+        font-size: 1.5rem;
+    }
+h1{
+    font-size: 20px;
+}
+    .questions {
+        width: 90vw;
+        padding: 4rem;
+    }
+
+    .option {
+        width: 100%;
+    }
+
+    .next,
+    #previous {
+        width: 100%;
+    }
+
+    #score-board {
+        width: 90%;
+    }
+    #date-time {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        margin: 0;
+        font-size: 20px;
+    }
+    button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}

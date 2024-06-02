@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="java.css">
+    <link rel="stylesheet" href="style.css">
     <title>Random Quiz</title>
 </head>
 <!-- <body class="container">
@@ -16,7 +16,9 @@
 
 <header class="head">
     <h2 id="date-time"></h2>
-    <h1>Dayo's Quiz</h1>
+    <br><br>
+    <h1>Dayo's Quiz App</h1>
+    <!-- <button id="dark-mode-toggle" class="dark-icon">Dark Mode</button> -->
 </header>
 <div id="quiz-container">
     <div class="questions">
@@ -27,6 +29,7 @@
            <li class="option"><span class="option2">Thomas Muller</span></li>
            <li class="option"><span class="option3">Asiwaju Bola Ahmed</span></li>
        </ol>
+       
        <h4 id="stat">question 1 of 10</h4>
     </div>
     <div class="buttons">
@@ -40,6 +43,7 @@
   <h2 id="score">0/3</h2>
   <button type="button" id="score-btn" onclick="backtoQuiz()">Back to Quiz</button>
   <button type="button" id="check-answer">Check Answer</button>
+  <button type="button" id="reload-btn" onclick="reloadQuiz()">Reload Quiz</button>
    <div class="answerboard">
         <h2>Answers</h2>
     <ol id="answers">
@@ -57,6 +61,6 @@
 
 
 
-    <script src="java.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
