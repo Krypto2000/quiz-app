@@ -366,6 +366,39 @@ function reloadQuiz() {
 }
 
 reloadBtn.addEventListener('click', reloadQuiz);
+// JavaScript for quiz submission and scoring
+const submitButton = document.getElementById('submit');
+
+submitButton.addEventListener('click', () => {
+    // Check if all questions have been answered
+    let unansweredQuestions = 0;
+    for (let j = 0; j < QuestionBank.length; j++) {
+        const questionAnswered = document.querySelector(`#question${j} .selected`);
+        if (!questionAnswered) {
+            unansweredQuestions++;
+        }
+    }
+
+    if (unansweredQuestions > 0) {
+        alert(`You have ${unansweredQuestions} unanswered question(s). Please answer all questions before submitting.`);
+        return;
+    }
+
+    // Calculate score
+    let score = 0;
+    for (let i = 0; i < QuestionBank.length; i++) {
+        const correctAnswer = QuestionBank[i].answer;
+        const selectedOption = document.querySelector(`#question${i} .selected`).textContent;
+
+        if (selectedOption === correctAnswer) {
+            score++;
+        }
+    }
+
+    // Display score
+    alert(`Your score: ${score}/${QuestionBank.length}`);
+});
+
 
 // JavaScript for toggling dark/light mode
 // const darkModeToggle = document.getElementById('dark-mode-toggle');
