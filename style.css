@@ -119,10 +119,11 @@ header img{
 }
 #score-board{
     width: 21rem;
-    background: red;
+    background: black;
     padding: 2rem;
     margin: auto;
     border: 1px solid pink;
+    color: #fff;
     text-align: center;
     display: none;
     position: relative;
@@ -130,7 +131,7 @@ header img{
     font-family: "Annie Use Your Telescope";
 
 }
-/* Add any necessary styles for the submit button */
+
 #submit {
     height: 3rem;
     width: 7rem;
@@ -159,7 +160,7 @@ button{
     border: none;
     outline: none;
     font-size: 1rem;
-    background:#de0606a4; 
+    background:black; 
     border-radius: 1.5rem;
     color: #fff;
    height: 50vh;
