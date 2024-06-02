@@ -15,7 +15,7 @@ To get a local copy up and running, follow these simple steps:
 Clone the repository:
 sh
 Copy code
-git clone https://github.com/krypt02000/quizapp
+git clone https://github.com/krypt02000/quiz-app
 Open the project folder in your code editor.
 Open index.html in your web browser to view the app.
 Usage
